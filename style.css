@@ -18,7 +18,8 @@ ul {
 }
 
 .container {
-  width: 1190px;
+  min-width: 920px;
+  max-width: 1190px;
   margin: 0 auto;
 }
 
@@ -52,6 +53,14 @@ ul {
 
 
 /* Header */
+.header-area {
+  position: sticky;
+  position: -webkit-sticky;
+  top: -43px;
+  box-shadow: 0 3px 16px 0 rgb(0 0 0 / 10%);
+  z-index: 99;
+}
+
 /* Socail Header */
 .social-header {
   background-color: #F5FBFF;
@@ -86,6 +95,7 @@ ul {
 /* Main Header */
 .main-header {
   padding: 20px 0;
+  background: white;
 }
 
 .main-header .middle-area nav li {
@@ -100,7 +110,7 @@ ul {
   height: 600px;
   background-image: url(./assets/img/slider-img.png);
   background-position: center;
-  background-repeat: no;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -261,4 +271,92 @@ ul {
 .welcome-section .btn:hover {
   background-color: #5db2ff;
   color: white;
+}
+
+/* Department Section */
+.department-section {
+  background-color: #f5fbff;
+  padding: 100px 0;
+}
+
+.department-section .department-head {
+  text-align: center;
+}
+
+.department-section .department-head .title {
+  font-size: 36px;
+  color: #1f1f1f;
+  font-weight: 500;
+  line-height: 48px;
+  position: relative;
+}
+
+.department-section .department-head .title::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  width: 50px;
+  height: 2px;
+  background: #5db2ff;
+}
+
+.department-section .department-head .dec {
+  margin-top: 30px;
+  font-size: 16px;
+  color: #727272;
+  line-height: 28px;
+}
+
+.department-section .department-cards {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.department-cards .card {
+  max-width: 30%;
+  margin: 20px 0;
+  box-shadow: 0 6px 10px rgb(0 0 0 / 4%);
+}
+
+.department-cards .card .card-img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.department-cards .card .card-img img {
+  width: 100%;
+  transition: transform .5s;
+}
+
+.department-cards .card .card-img img:hover {
+  width: 100%;
+  transform: scale(1.2);
+}
+
+.department-cards .card-body {
+  background-color: white;
+  padding: 30px;
+}
+
+.department-cards .card-body .card-title {
+  font-size: 22px;
+  font-weight: 400;
+  color: #1f1f1f;
+  margin-bottom: 10px;
+}
+
+.department-cards .card-body .card-dec {
+  color: #727272;
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 20px;
+
+}
+
+.department-cards .card-body a {
+  color: #5db2ff;
+  font-size: 16px;
 }
